@@ -9,20 +9,41 @@ import { EffectComposer, Glitch } from "@react-three/postprocessing";
 
 function OverlayText() {
   return (
-    <Html center>
-      <h1 style={{ color: "red", fontSize: "7rem", fontWeight: "bold" }}>
-        <Typewriter
-          words={["Error404FreshGrad"]}
-          loop={false}
-          cursor
-          cursorStyle="_"
-          typeSpeed={100}
-          deleteSpeed={50}
-        />
-      </h1>
+    <Html fullscreen>
+      <div
+        style={{
+          position: "fixed",
+          bottom: 0,
+          width: "100vw",
+          height: "40vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          pointerEvents: "none", // biar gak ganggu klik OrbitControls
+        }}
+      >
+        <h1
+          style={{
+            color: "#39FF14",
+            fontSize: "7rem",
+            fontWeight: "bold",
+            textAlign: "center",
+          }}
+        >
+          <Typewriter
+            words={["Error404FreshGrad"]}
+            loop={false}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={50}
+          />
+        </h1>
+      </div>
     </Html>
   );
 }
+
 // Hero Section
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -50,9 +71,9 @@ results driven webs/apps`;
           <Suspense fallback={null}>
             <Float speed={0.5}>
               <GraduationHat scale={isMobile ? 0.7 : 1} castShadow receiveShadow />
+              <OverlayText />
             </Float>
           </Suspense>
-
           {/* Post Processing Effects (selalu taruh terakhir) */}
           <EffectComposer>
             <Glitch
@@ -62,7 +83,6 @@ results driven webs/apps`;
               ratio={0.9}
             />
           </EffectComposer>
-          <OverlayText />
         </Canvas>
       </figure>
     </section>
