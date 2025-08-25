@@ -47,9 +47,9 @@ function OverlayText() {
 // Hero Section
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
-  const text = `I help growing brands and startups gain an
-unfair advantage through premium
-results driven webs/apps`;
+  const text = `🌍 Just graduated, always learning
+✨ Designing with curiosity & clarity
+🔥 Creating results that inspire growth`;
 
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">

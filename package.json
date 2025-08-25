@@ -24,6 +24,7 @@
     "react-responsive": "^10.0.1",
     "react-scroll": "^1.9.3",
     "react-simple-typewriter": "^5.0.1",
+    "react-typed": "^2.0.12",
     "tailwindcss": "^4.1.7",
     "three": "^0.176.0",
     "three-stdlib": "^2.36.0"
