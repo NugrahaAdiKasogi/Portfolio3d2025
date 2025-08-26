@@ -80,26 +80,26 @@ export const servicesData = [
 export const projects = [
   {
     id: 1,
-    name: "Mobile Accessories E-commerce",
+    name: "Kitchen Code an Edugame",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
+      "An edugame that teaches cooking skills through interactive lessons and cooking simulations",
+    href: "https://kitchen-code.vercel.app",
     image: "/assets/projects/mobile-accessories-store.jpg",
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
-      { id: 1, name: "React" },
+      { id: 1, name: "Unity3d" },
       { id: 2, name: "Next.js" },
       { id: 3, name: "Node.js" },
-      { id: 4, name: "MongoDB" },
+      { id: 4, name: "WebGL" },
       { id: 5, name: "Tailwind CSS" },
     ],
   },
   {
     id: 2,
-    name: "Plant Shop E-commerce",
+    name: "My Creative Portfolio",
     description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
-    href: "",
+      "A showcase of my creative work, including graphic design, web development, and more.",
+    href: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
     image: "/assets/projects/plant-shop.jpg",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
@@ -111,9 +111,9 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Apple Tech Marketplace",
+    name: "Jannah Quest",
     description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
+      "An islamic gamification platform for tracking ibadah.",
     href: "",
     image: "/assets/projects/apple-tech-store.jpg",
     bgImage: "/assets/backgrounds/map.jpg",
@@ -126,9 +126,9 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Electronics & Gadgets Store",
+    name: "CLI RPG Game",
     description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
+      "A text-based RPG game built with a command-line interface.",
     href: "",
     image: "/assets/projects/electronics-store.jpg",
     bgImage: "/assets/backgrounds/poster.jpg",
@@ -141,9 +141,9 @@ export const projects = [
   },
   {
     id: 5,
-    name: "Home Decor Marketplace",
+    name: "AI Image Generator",
     description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
+      "A tool for generating images from text prompts using advanced AI techniques.",
     href: "",
     image: "/assets/projects/home-decor-store.jpg",
     bgImage: "/assets/backgrounds/table.jpg",
@@ -156,9 +156,9 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Digital Game Store",
+    name: "Falah Period Page Landing",
     description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
+      "A landing page for a period tracking app with a focus on user engagement and conversion.",
     href: "",
     image: "/assets/projects/game-store.jpg",
     bgImage: "/assets/backgrounds/curtains.jpg",
@@ -171,11 +171,11 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
+  { name: "Instagram", href: "https://www.instagram.com/nugrahaadiputranap?utm_source=ig_web_button_share_sheet&igsh=NmlzZm8zdmxocTNk" },
   {
     name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
+    href: "https://www.youtube.com/@AgamMovement",
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/nugraha-adiputra-aa98ba237/" },
+  { name: "GitHub", href: "https://github.com/NugrahaAdiKasogi" },
 ];

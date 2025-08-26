@@ -16,7 +16,7 @@ const ServiceSummary = () => {
         y: -100,
         scrollTrigger: {
           trigger: "#error-text",
-          start: "top+=500 bottom",
+          start: "top+=900 bottom",
           end: "+=800", // range scroll sejauh 1000px
           scrub: true,
           pin: true,
@@ -47,8 +47,9 @@ const ServiceSummary = () => {
   return (
     <section
       ref={container}
-      className="min-h-screen mt-[300px] mb-[300px] overflow-hidden font-light leading-snug text-center contact-text-responsive"
+      className="min-h-screen mt-[100px] mb-[300px] overflow-hidden font-light leading-snug text-center contact-text-responsive"
     >
+      
       {/* Error 404 */}
       <div id="error-text">
         <Terminal />
