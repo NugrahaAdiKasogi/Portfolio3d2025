@@ -5,15 +5,19 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
-  const text = `Passionate about clean architecture
-    I build scalable, high-performance solutions
-    from prototype to production`;
-  const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
-  When I’m not shipping:
-⚡️ Open-sourcing my latest experiment (or hacking on yours)
-🎥 Teaching devs on Twitch/YouTube—because rising tides lift all ships
-🧗 Rock climbing (problem-solving with real stakes)
-🎸 Strumming chords while CI pipelines pass (multitasking at its finest)`;
+  const text = `Fresh graduate with a passion for learning
+    Exploring design, development, and game projects
+    Always curious to build and experiment`;
+  const aboutText = `As a computer science education student, I enjoy combining creativity and technology.
+During my studies, I explored graphic design, front-end development, and even simple game projects—each one teaching me new ways to solve problems and tell stories.
+
+Beyond classes:
+📚 Active in student organizations, leading projects in multimedia and communication
+🏆 National-level achievements in digital innovation and programming competitions
+🎨 Designing visuals and content for events and branding
+💻 Experimenting with React, Unity, and design tools to sharpen my skills
+
+I may just be starting out, but I bring enthusiasm, adaptability, and a strong will to grow in every opportunity I take.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -41,20 +45,20 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Cod with purpose, Built to scale"}
+        subTitle={"Learning with passion, Growing with purpose"}
         title={"About"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-lg font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="images/man.jpg"
+          src="images/man.png"
           alt="man"
           className="w-md rounded-3xl"
         />
-        <AnimatedTextLines text={aboutText} className={"w-full"} />
+        <AnimatedTextLines text={aboutText} className={"w-full text-2xl"} />
       </div>
     </section>
   );

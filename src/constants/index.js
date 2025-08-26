@@ -1,78 +1,78 @@
 // index.js
 export const servicesData = [
   {
-    title: "FullStack Development",
+    title: "Graphic Design",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "Visual storytelling has always fascinated me. I enjoy exploring layouts, colors, and typography to create designs that are both communicative and aesthetic—ranging from posters and logos to digital content.",
     items: [
       {
-        title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        title: "Branding Basics",
+        description: "(Logo, Typography, Visual Identity)",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX)",
+        title: "Digital Assets",
+        description: "(Social Media Content, Mockups, Posters)",
       },
       {
-        title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        title: "Tools",
+        description: "(Figma, Photoshop, Illustrator, Canva)",
       },
     ],
   },
   {
-    title: "DevOps & Cloud Solutions",
+    title: "Development & Deployment",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "I’m interested in building applications from scratch and seeing them come to life. From coding the frontend, creating simple backends, to learning how apps can be deployed and accessed by others.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        title: "Frontend",
+        description: "(React, Tailwind, Responsive UI/UX)",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Backend",
+        description: "(APIs, Node.js, Basic Auth & DB)",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "Deployment",
+        description: "(Vercel, Netlify, Docker basics)",
       },
     ],
   },
   {
-    title: "Security & Optimization",
+    title: "APIs, Frontends & UI/UX",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "I enjoy learning how frontends and backends communicate through APIs, and how that can be wrapped into user-friendly interfaces. I want to keep exploring how to build products that are both functional and delightful to use.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "APIs",
+        description: "(REST APIs, Fetch/Axios, Integrations)",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Frontend Craft",
+        description: "(React, Vue, TypeScript, UI Components)",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "UI/UX",
+        description: "(Prototyping, Wireframing, Design Systems)",
       },
     ],
   },
   {
-    title: "Web & Mobile Apps",
+    title: "Game Development",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "Games are a fun way to learn logic and creativity. I’m interested in exploring simple game development as a medium that combines coding, design, and interaction.",
     items: [
       {
-        title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        title: "3D Games",
+        description: "(Unity, Serious Games, Web Games)",
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        title: "Gameplay Logic",
+        description: "(Physics, Scoring Systems, Levels)",
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "Creative Experiments",
+        description: "(Storytelling, Character Design, Assets)",
       },
     ],
   },

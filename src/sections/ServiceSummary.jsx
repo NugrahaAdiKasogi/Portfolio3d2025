@@ -20,7 +20,6 @@ const ServiceSummary = () => {
           end: "+=800", // range scroll sejauh 1000px
           scrub: true,
           pin: true,
-          markers: true, // debug garis hijau/merah
         },
       });
 
@@ -31,7 +30,6 @@ const ServiceSummary = () => {
             start: "top 80%",
             end: "top 20%",
             toggleActions: "play none none reverse",
-            markers: true, // debug
           },
         })
         .from(".skill-text", {

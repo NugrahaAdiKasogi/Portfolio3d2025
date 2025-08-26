@@ -25,7 +25,7 @@ function OverlayText() {
         <h1
           style={{
             color: "#39FF14",
-            fontSize: "7rem",
+            fontSize: "5rem",
             fontWeight: "bold",
             textAlign: "center",
           }}
