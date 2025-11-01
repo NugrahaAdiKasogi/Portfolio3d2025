@@ -25,9 +25,9 @@ const Terminal = () => {
         <span className="mr-2">&gt;</span>
         <ReactTyped
           strings={[
-            "<404> Not Found Yet...",
-            "Searching Skills...",
-            "Loading Portfolio...",
+            "STATUS: 200 OK.",
+            "Ready To Deploy...",
+            "Launching Portfolio...",
             "Scroll To See More...",
           ]}
           typeSpeed={60}

@@ -5,19 +5,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
-  const text = `Fresh graduate with a passion for learning
-    Exploring design, development, and game projects
-    Always curious to build and experiment`;
-  const aboutText = `As a computer science education student, I enjoy combining creativity and technology.
-During my studies, I explored graphic design, front-end development, and even simple game projects—each one teaching me new ways to solve problems and tell stories.
+  const text = `A developer with a designer's eye.
+A communicator with a teacher's clarity.
+A problem-solver who delivers results.`;
 
-Beyond classes:
-📚 Active in student organizations, leading projects in multimedia and communication
-🏆 National-level achievements in digital innovation and programming competitions
-🎨 Designing visuals and content for events and branding
-💻 Experimenting with React, Unity, and design tools to sharpen my skills
-
-I may just be starting out, but I bring enthusiasm, adaptability, and a strong will to grow in every opportunity I take.`;
+  const aboutText = `My passion lies at the intersection of technology, design, and communication.
+With a background in Computer Science Education, I combine technical logic with human-centered thinking to turn complex ideas into intuitive digital experiences.
+I’ve built full-stack applications, designed UI/UX systems in Figma, and led teams to win a 1st Place National Digital Innovation Competition.
+Now, I’m looking to contribute in a role where I can blend development, design, and creative problem-solving to build impactful, user-focused products.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {
@@ -45,12 +40,13 @@ I may just be starting out, but I bring enthusiasm, adaptability, and a strong w
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Learning with passion, Growing with purpose"}
+        subTitle={"My Background & Philosophy"}
         title={"About"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
       />
+
       <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-lg font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
@@ -58,7 +54,23 @@ I may just be starting out, but I bring enthusiasm, adaptability, and a strong w
           alt="man"
           className="w-md rounded-3xl"
         />
-        <AnimatedTextLines text={aboutText} className={"w-full text-2xl"} />
+        {/* Bungkus AnimatedTextLines dan Tombol dalam div 
+          agar rapi di mobile dan desktop
+        */}
+        <div className="w-full flex flex-col items-start gap-8">
+          <AnimatedTextLines text={aboutText} className={"w-full text-2xl"} />
+
+          {/* === TAMBAHKAN TOMBOL INI DI BAWAH TEKS === */}
+          {/* 'w-full sm:w-auto' membuatnya full-width di mobile, dan auto di desktop */}
+          <a
+            href="/Nugraha_Adiputra_Frontend_CV.pdf"
+            download
+            className="w-full sm:w-auto px-6 py-3 mt-4 text-lg font-bold text-black bg-white rounded-lg shadow-lg hover:bg-gray-200 transition-all text-center"
+          >
+            Download My CV
+          </a>
+          {/* === AKHIR BLOK TOMBOL === */}
+        </div>
       </div>
     </section>
   );

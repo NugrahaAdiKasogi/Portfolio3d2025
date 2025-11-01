@@ -11,18 +11,6 @@ const ServiceSummary = () => {
 
   useGSAP(
     () => {
-      gsap.to("#error-text", {
-        opacity: 0,
-        y: -100,
-        scrollTrigger: {
-          trigger: "#error-text",
-          start: "top+=900 bottom",
-          end: "+=800", // range scroll sejauh 1000px
-          scrub: true,
-          pin: true,
-        },
-      });
-
       gsap
         .timeline({
           scrollTrigger: {
@@ -47,42 +35,35 @@ const ServiceSummary = () => {
   return (
     <section
       ref={container}
-      className="min-h-screen mt-[100px] mb-[300px] overflow-hidden font-light leading-snug text-center contact-text-responsive"
+      className="min-h-screen mt-[100px] mb-[200px] font-light leading-snug text-center"
+      style={{ overflowX: "hidden", overflowY: "visible" }}
     >
-      
-      {/* Error 404 */}
-      <div id="error-text">
-        <Terminal />
-      </div>
-
-      {/* Skills muncul setelah scroll */}
-      <div id="skills-container" className=" space-y-12 text-8xl">
-        <div id="title-service-1" className="skill-text">
+      <div
+        id="skills-container"
+        className="space-y-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-64 px-4 sm:px-8"
+        style={{ wordBreak: "break-word", whiteSpace: "normal" }}
+      >
+        <div className="skill-text">
           <p>Graphic Design</p>
         </div>
-        <div
-          id="title-service-2"
-          className="skill-text flex items-center justify-center gap-3"
-        >
-          <p className="font-normal">Development</p>
+        <div className="skill-text flex flex-wrap items-center justify-center gap-3">
+          <p className="font-normal">Informatics</p>
           <div className="w-10 h-1 md:w-32 bg-gold" />
-          <p>Deployment</p>
+          <p>Education</p>
         </div>
-        <div
-          id="title-service-3"
-          className="skill-text flex items-center justify-center gap-3"
-        >
+        <div className="skill-text flex flex-wrap items-center justify-center gap-3">
           <p>APIs</p>
           <div className="w-10 h-1 md:w-32 bg-gold" />
           <p className="italic">Frontends</p>
           <div className="w-10 h-1 md:w-32 bg-gold" />
           <p>UI/UX</p>
         </div>
-        <div id="title-service-4" className="skill-text">
+        <div className="skill-text">
           <p>Game Development</p>
         </div>
       </div>
     </section>
+
   );
 };
 

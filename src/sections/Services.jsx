@@ -5,9 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 const Services = () => {
-  const text = `From graphic design to apps and games, 
-  I enjoy experimenting, learning by doing, and 
-  sharing ideas through my work.`;
+  const text = `I deliver end-to-end solutions, from high-fidelity UI/UX mockups in Figma to fully responsive web applications in React. My unique background in education ensures every project is not only technically solid, but also visually engaging and clearly communicated.`;
   const serviceRefs = useRef([]);
   const isDesktop = useMediaQuery({ minWidth: "48rem" }); //768px
   useGSAP(() => {
@@ -26,9 +24,9 @@ const Services = () => {
     });
   }, []);
   return (
-    <section id="services" className="min-h-screen bg-black rounded-t-4xl">
+    <section id="enthusiast" className="min-h-screen bg-black rounded-t-4xl">
       <AnimatedHeaderSection
-        subTitle={"STILL LEARNING, ALWAYS BUILDING"}
+        subTitle={"BRIDGING DESIGN, CODE, & COMMUNICATION"}
         title={"ENTHUSIAST"}
         text={text}
         textColor={"text-white"}
@@ -42,9 +40,9 @@ const Services = () => {
           style={
             isDesktop
               ? {
-                  top: `calc(10vh + ${index * 5}em)`,
-                  marginBottom: `${(servicesData.length - index - 1) * 5}rem`,
-                }
+                top: `calc(10vh + ${index * 5}em)`,
+                marginBottom: `${(servicesData.length - index - 1) * 5}rem`,
+              }
               : { top: 0 }
           }
         >

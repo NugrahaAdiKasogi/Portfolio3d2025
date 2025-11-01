@@ -89,17 +89,22 @@ const Navbar = () => {
     if (isOpen) {
       tl.current.reverse();
       iconTl.current.reverse();
+
+      // tambahkan: delay sedikit agar animasi sempat selesai
+      setTimeout(() => setIsOpen(false), 600);
     } else {
+      setIsOpen(true);
       tl.current.play();
       iconTl.current.play();
     }
-    setIsOpen(!isOpen);
   };
+
   return (
     <>
       <nav
         ref={navRef}
-        className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
+        className={`fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2 transition-all duration-500 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
           {["home", "enthusiast", "about", "work", "contact"].map(

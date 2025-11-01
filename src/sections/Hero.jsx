@@ -3,40 +3,51 @@ import { Float, OrbitControls, Html } from "@react-three/drei";
 import { GraduationHat } from "../components/GraduationHat";
 import { useMediaQuery } from "react-responsive";
 import { Typewriter } from "react-simple-typewriter";
-import { useRef, useEffect, Suspense } from "react";
+import { Suspense } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { EffectComposer, Glitch } from "@react-three/postprocessing";
 
 function OverlayText() {
+  const isMobile = useMediaQuery({ maxWidth: 853 });
+
   return (
     <Html fullscreen>
       <div
         style={{
           position: "fixed",
-          bottom: 0,
+          bottom: isMobile ? "10vh" : 0,
           width: "100vw",
-          height: "40vh",
+          height: isMobile ? "30vh" : "40vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          pointerEvents: "none", // biar gak ganggu klik OrbitControls
+          padding: isMobile ? "0 1rem" : "0",
+          pointerEvents: "none",
+          textAlign: "center",
         }}
       >
         <h1
           style={{
             color: "#39FF14",
-            fontSize: "5rem",
+            fontSize: isMobile ? "2rem" : "5rem",
             fontWeight: "bold",
-            textAlign: "center",
+            lineHeight: isMobile ? "1.2" : "1.4",
+            wordBreak: "break-word",
+            whiteSpace: "normal",
           }}
         >
           <Typewriter
-            words={["Error404FreshGrad"]}
+            words={[
+              "EdTech Development",
+              "Frontend Developer",
+              "Graphic Designer",
+              "Scroll To See More...",
+            ]}
             loop={false}
             cursor
             cursorStyle="_"
-            typeSpeed={100}
-            deleteSpeed={50}
+            typeSpeed={isMobile ? 60 : 100}
+            deleteSpeed={isMobile ? 30 : 50}
           />
         </h1>
       </div>
@@ -44,45 +55,73 @@ function OverlayText() {
   );
 }
 
-// Hero Section
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
-  const text = `🌍 Just graduated, always learning
-✨ Designing with curiosity & clarity
-🔥 Creating results that inspire growth`;
+
+  const text = `A Frontend Developer with a Designer's Eye.
+  Educator at heart. Problem-solver by nature.`;
 
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">
       <AnimatedHeaderSection
-        subTitle={"Fresh Graduate Loading…"}
-        title={"Nugraha adi"}
+        subTitle={"STATUS: 200 OK. Ready to Deploy."}
+        title={"Nugraha"}
         text={text}
         textColor={"text-black"}
       />
 
+      {/* === BLOK TOMBOL BARU === */}
+      <div className="relative z-10 flex flex-col sm:flex-row items-start justify-start gap-4 px-8 sm:px-24 pb-8 sm:pb-12 transform -translate-y-4 sm:-translate-y-[150px]">
+        <a
+          href="/Nugraha_Adiputra_Frontend_CV.pdf" // Pastikan nama file CV Anda benar
+          download
+          className="w-full sm:w-auto px-6 py-3 font-bold text-black bg-white rounded-lg shadow-lg hover:bg-gray-200 transition-all text-center"
+        >
+          Download CV
+        </a>
+        <a
+          href="#contact"
+          className="w-full sm:w-auto px-6 py-3 font-bold text-white bg-black rounded-lg shadow-lg hover:bg-gray-800 transition-all text-center"
+        >
+          Contact Me
+        </a>
+      </div>
+      {/* === AKHIR BLOK TOMBOL === */}
+
       <figure className="absolute inset-0 -z-50 w-screen h-screen">
-        <Canvas shadows camera={{ position: [0, 6, 10], fov: 20 }}>
-          <OrbitControls enablePan />
-          <ambientLight intensity={0.9} />
+        <Canvas
+          shadows
+          camera={{
+            position: isMobile ? [0, 4, 8] : [0, 6, 10],
+            fov: isMobile ? 30 : 20,
+          }}
+        >
+          <OrbitControls
+            enablePan
+            minDistance={isMobile ? 4 : 6}
+            maxDistance={isMobile ? 10 : 15}
+          />
+
+          <ambientLight intensity={isMobile ? 0.7 : 0.9} />
           <directionalLight position={[5, 10, 5]} intensity={1.5} castShadow />
           <pointLight position={[-5, 5, -5]} intensity={0.9} />
 
           {/* Model 3D */}
           <Suspense fallback={null}>
-            <Float speed={0.5}>
-              <GraduationHat scale={isMobile ? 0.7 : 1} castShadow receiveShadow />
+            <Float
+              speed={0.5}
+              rotationIntensity={isMobile ? 0.3 : 0.6}
+              floatIntensity={isMobile ? 0.8 : 1.2}
+            >
+              <GraduationHat
+                scale={isMobile ? 0.4 : 1}
+                position={isMobile ? [0, 0.7, 0] : [0, -0.3, 0]}
+                castShadow
+                receiveShadow
+              />
               <OverlayText />
             </Float>
           </Suspense>
-          {/* Post Processing Effects (selalu taruh terakhir) */}
-          <EffectComposer>
-            <Glitch
-              delay={[1.5, 3.5]}
-              duration={[0.3, 1.0]}
-              strength={[0.3, 1.0]}
-              ratio={0.9}
-            />
-          </EffectComposer>
         </Canvas>
       </figure>
     </section>

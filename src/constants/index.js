@@ -1,90 +1,121 @@
 // index.js
 export const servicesData = [
   {
-    title: "Graphic Design",
+    title: "Frontend Development & UI/UX",
     description:
-      "Visual storytelling has always fascinated me. I enjoy exploring layouts, colors, and typography to create designs that are both communicative and aesthetic—ranging from posters and logos to digital content.",
+      "My core passion. I specialize in building responsive, user-centric web applications. I bridge the crucial gap between high-fidelity UI/UX design in Figma and clean, functional code in React and Next.js.",
     items: [
       {
-        title: "Branding Basics",
-        description: "(Logo, Typography, Visual Identity)",
+        title: "Frontend Development",
+        description: "(React.js, Next.js, Tailwind, Responsive Design)",
       },
       {
-        title: "Digital Assets",
-        description: "(Social Media Content, Mockups, Posters)",
+        title: "UI/UX Design",
+        description: "(Figma Prototyping, Wireframing, User Flow Analysis)",
       },
       {
-        title: "Tools",
-        description: "(Figma, Photoshop, Illustrator, Canva)",
+        title: "API & Backend Integration",
+        description: "(REST APIs, Supabase/Firebase, Auth, Data Fetching)",
       },
     ],
   },
   {
-    title: "Development & Deployment",
+    title: "Informatics & Education",
     description:
-      "I’m interested in building applications from scratch and seeing them come to life. From coding the frontend, creating simple backends, to learning how apps can be deployed and accessed by others.",
+      "My degree in Computer Science Education taught me how to communicate complex technical concepts with clarity. I have practical experience delivering 20+ class periods on algorithms and building full-scale lesson plans.",
     items: [
       {
-        title: "Frontend",
-        description: "(React, Tailwind, Responsive UI/UX)",
+        title: "Technical Communication",
+        description: "(Breaking down complex code for diverse audiences)",
       },
       {
-        title: "Backend",
-        description: "(APIs, Node.js, Basic Auth & DB)",
+        title: "Curriculum & Media Design",
+        description: "(Designing lesson plans, modules, and LKPD)",
       },
       {
-        title: "Deployment",
-        description: "(Vercel, Netlify, Docker basics)",
+        title: "EdTech Development",
+        description: "(Built an LMS prototype in Next.js & an educational game in Unity)",
       },
     ],
   },
   {
-    title: "APIs, Frontends & UI/UX",
+    title: "Visual & Graphic Design",
     description:
-      "I enjoy learning how frontends and backends communicate through APIs, and how that can be wrapped into user-friendly interfaces. I want to keep exploring how to build products that are both functional and delightful to use.",
+      "I translate complex ideas into clear, engaging visuals. My experience ranges from creating complete brand identities for organizations to producing 25+ social media assets during my internship.",
     items: [
       {
-        title: "APIs",
-        description: "(REST APIs, Fetch/Axios, Integrations)",
+        title: "Branding & Identity",
+        description: "(Logo Design, Merchandise, Visual Guidelines)",
       },
       {
-        title: "Frontend Craft",
-        description: "(React, Vue, TypeScript, UI Components)",
+        title: "Digital Content Creation",
+        description: "(Social Media Assets, Presentation Decks, Posters)",
       },
       {
-        title: "UI/UX",
-        description: "(Prototyping, Wireframing, Design Systems)",
+        title: "Primary Tools",
+        description: "(Figma, Adobe Photoshop, Illustrator, Canva)",
       },
     ],
   },
   {
     title: "Game Development",
     description:
-      "Games are a fun way to learn logic and creativity. I’m interested in exploring simple game development as a medium that combines coding, design, and interaction.",
+      "I have hands-on experience developing educational games from concept to deployment. My work, 'Kitchen Code,' was tested in a classroom and improved student engagement by +25%.",
     items: [
       {
-        title: "3D Games",
-        description: "(Unity, Serious Games, Web Games)",
+        title: "Primary Tool",
+        description: "(Unity, C#)",
       },
       {
-        title: "Gameplay Logic",
-        description: "(Physics, Scoring Systems, Levels)",
+        title: "Core Loops & Logic",
+        description: "(Gameplay Mechanics, Scoring Systems, UI Integration)",
       },
       {
-        title: "Creative Experiments",
-        description: "(Storytelling, Character Design, Assets)",
+        title: "Project: EduGame Kitchen Code",
+        description: "(Deployed serious game for learning programming logic)",
       },
     ],
   },
 ];
+
 export const projects = [
   {
     id: 1,
+        name: "Jannah Quest",
+    description:
+      "An islamic gamification platform for tracking ibadah.",
+    href: "https://jannah-quest.vercel.app/",
+    image: "/assets/projects/jannah.png",
+    bgImage: "/assets/backgrounds/map.jpg",
+    frameworks: [
+      { id: 1, name: "Next.js" },
+      { id: 2, name: "Supabase" },
+      { id: 3, name: "Tailwind CSS" },
+      { id: 4, name: "Vite" },
+    ],
+  },
+  {
+    id: 2,
+    name: "My Creative Portfolio",
+    description:
+      "A showcase of my creative work, including graphic design, web development, and more.",
+    href: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
+    image: "/assets/projects/portfolio.png",
+    bgImage: "/assets/backgrounds/curtains.jpg",
+    frameworks: [
+      { id: 1, name: "Behance" },
+      { id: 2, name: "Adobe Photoshop" },
+      { id: 3, name: "Figma" },
+      { id: 4, name: "Adobe Illustrator" },
+    ],
+  },
+  {
+    id: 3,
     name: "Kitchen Code an Edugame",
     description:
       "An edugame that teaches cooking skills through interactive lessons and cooking simulations",
     href: "https://kitchen-code.vercel.app",
-    image: "/assets/projects/mobile-accessories-store.jpg",
+    image: "/assets/projects/kitchen.png",
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "Unity3d" },
@@ -95,81 +126,22 @@ export const projects = [
     ],
   },
   {
-    id: 2,
-    name: "My Creative Portfolio",
-    description:
-      "A showcase of my creative work, including graphic design, web development, and more.",
-    href: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
-    image: "/assets/projects/plant-shop.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
-    frameworks: [
-      { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
-      { id: 3, name: "Stripe API" },
-      { id: 4, name: "Tailwind CSS" },
-    ],
-  },
-  {
-    id: 3,
-    name: "Jannah Quest",
-    description:
-      "An islamic gamification platform for tracking ibadah.",
-    href: "",
-    image: "/assets/projects/apple-tech-store.jpg",
-    bgImage: "/assets/backgrounds/map.jpg",
-    frameworks: [
-      { id: 1, name: "Blazor" },
-      { id: 2, name: "ASP.NET Core" },
-      { id: 3, name: "SQL Server" },
-      { id: 4, name: "Bootstrap" },
-    ],
-  },
-  {
     id: 4,
-    name: "CLI RPG Game",
-    description:
-      "A text-based RPG game built with a command-line interface.",
-    href: "",
-    image: "/assets/projects/electronics-store.jpg",
-    bgImage: "/assets/backgrounds/poster.jpg",
-    frameworks: [
-      { id: 1, name: "Vue.js" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "MySQL" },
-      { id: 4, name: "SCSS" },
-    ],
-  },
-  {
-    id: 5,
-    name: "AI Image Generator",
-    description:
-      "A tool for generating images from text prompts using advanced AI techniques.",
-    href: "",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
-    frameworks: [
-      { id: 1, name: "Angular" },
-      { id: 2, name: "Firebase" },
-      { id: 3, name: "GraphQL" },
-      { id: 4, name: "Material UI" },
-    ],
-  },
-  {
-    id: 6,
     name: "Falah Period Page Landing",
     description:
       "A landing page for a period tracking app with a focus on user engagement and conversion.",
-    href: "",
-    image: "/assets/projects/game-store.jpg",
+    href: "https://ukdm-upi.netlify.app/",
+    image: "/assets/projects/Falah.png",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
-      { id: 1, name: "Svelte" },
-      { id: 2, name: "Node.js" },
-      { id: 3, name: "MongoDB" },
-      { id: 4, name: "Chakra UI" },
+      { id: 1, name: "HTML" },
+      { id: 2, name: "CSS" },
+      { id: 3, name: "JavaScript" },
+      { id: 4, name: "Netlify" },
     ],
   },
 ];
+
 export const socials = [
   { name: "Instagram", href: "https://www.instagram.com/nugrahaadiputranap?utm_source=ig_web_button_share_sheet&igsh=NmlzZm8zdmxocTNk" },
   {
