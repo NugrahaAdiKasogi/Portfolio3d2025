@@ -73,8 +73,8 @@ const Hero = () => {
       {/* === BLOK TOMBOL BARU === */}
       <div className="relative z-10 flex flex-col sm:flex-row items-start justify-start gap-4 px-8 sm:px-24 pb-8 sm:pb-12 transform -translate-y-4 sm:-translate-y-[150px]">
         <a
-          href="/Nugraha_Adiputra_Frontend_CV.pdf" // Pastikan nama file CV Anda benar
-          download
+          href="/CV.pdf" // Pastikan nama file CV Anda benar
+          download="Nugraha_Adiputra_CV.pdf"
           className="w-full sm:w-auto px-6 py-3 font-bold text-black bg-white rounded-lg shadow-lg hover:bg-gray-200 transition-all text-center"
         >
           Download CV

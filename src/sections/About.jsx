@@ -63,8 +63,8 @@ Now, I’m looking to contribute in a role where I can blend development, design
           {/* === TAMBAHKAN TOMBOL INI DI BAWAH TEKS === */}
           {/* 'w-full sm:w-auto' membuatnya full-width di mobile, dan auto di desktop */}
           <a
-            href="/Nugraha_Adiputra_Frontend_CV.pdf"
-            download
+            href="/CV.pdf"
+            download="Nugraha_Adiputra_CV.pdf"
             className="w-full sm:w-auto px-6 py-3 mt-4 text-lg font-bold text-black bg-white rounded-lg shadow-lg hover:bg-gray-200 transition-all text-center"
           >
             Download My CV
