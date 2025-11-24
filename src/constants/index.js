@@ -78,6 +78,13 @@ export const servicesData = [
   },
 ];
 
+export const cvLinks = {
+  default: "/CV.pdf", // CV Umum (yang sekarang ada)
+  guru: "/cv/cv-guru.pdf",
+  it: "/cv/cv-it.pdf",
+  design: "/cv/cv-design.pdf",
+};
+
 export const projects = [
   {
     id: 1,
@@ -93,6 +100,7 @@ export const projects = [
       { id: 3, name: "Tailwind CSS" },
       { id: 4, name: "Vite" },
     ],
+    category: "it", 
   },
   {
     id: 2,
@@ -108,6 +116,8 @@ export const projects = [
       { id: 3, name: "Figma" },
       { id: 4, name: "Adobe Illustrator" },
     ],
+    category: "design", 
+
   },
   {
     id: 3,
@@ -124,6 +134,7 @@ export const projects = [
       { id: 4, name: "WebGL" },
       { id: 5, name: "Tailwind CSS" },
     ],
+    category: "guru", 
   },
   {
     id: 4,
@@ -139,6 +150,7 @@ export const projects = [
       { id: 3, name: "JavaScript" },
       { id: 4, name: "Netlify" },
     ],
+    category: "it", 
   },
 ];
 

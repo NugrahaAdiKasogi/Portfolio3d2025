@@ -4,21 +4,33 @@ import { projects } from "../constants";
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom"; 
 
-const Works = () => {
+const Works = ({ category = "all", showCategories = false }) => {
   const overlayRefs = useRef([]);
   const previewRef = useRef(null);
-
   const [currentIndex, setCurrentIndex] = useState(null);
-  const text = `Featured projects that have been meticulously
-    crafted with passion to drive
-    results and impact.`;
+
+  // Text dinamis sesuai mode
+  const text = showCategories 
+    ? "Choose a path to explore my specialized portfolios." 
+    : "Featured projects that have been meticulously crafted with passion.";
+
+  const title = showCategories ? "My Expertise" : "Selected Projects";
 
   const mouse = useRef({ x: 0, y: 0 });
   const moveX = useRef(null);
   const moveY = useRef(null);
 
+  // Filter projects (Hanya dipakai saat Mode List)
+  const filteredProjects = category === "all" 
+    ? projects 
+    : projects.filter((project) => project.category === category);
+
+  // --- ANIMASI GSAP (Hanya jalan jika BUKAN mode kategori) ---
   useGSAP(() => {
+    if (showCategories) return; // Stop animasi jika sedang menampilkan kartu
+
     moveX.current = gsap.quickTo(previewRef.current, "x", {
       duration: 1.5,
       ease: "power3.out",
@@ -39,60 +51,33 @@ const Works = () => {
         trigger: "#project",
       },
     });
-  }, []);
+  }, [showCategories, category]); 
 
+  // --- MOUSE HANDLERS (Hanya untuk Mode List) ---
   const handleMouseEnter = (index) => {
-    if (window.innerWidth < 768) return;
+    if (showCategories || window.innerWidth < 768) return;
     setCurrentIndex(index);
-
     const el = overlayRefs.current[index];
-    if (!el) return;
-
-    gsap.killTweensOf(el);
-    gsap.fromTo(
-      el,
-      {
-        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-      },
-      {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-        duration: 0.15,
-        ease: "power2.out",
-      }
-    );
-
-    gsap.to(previewRef.current, {
-      opacity: 1,
-      scale: 1,
-      duration: 0.3,
-      ease: "power2.out",
-    });
+    if (el) {
+        gsap.killTweensOf(el);
+        gsap.fromTo(el, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }, { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)", duration: 0.15, ease: "power2.out" });
+        gsap.to(previewRef.current, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out" });
+    }
   };
 
   const handleMouseLeave = (index) => {
-    if (window.innerWidth < 768) return;
+    if (showCategories || window.innerWidth < 768) return;
     setCurrentIndex(null);
-
     const el = overlayRefs.current[index];
-    if (!el) return;
-
-    gsap.killTweensOf(el);
-    gsap.to(el, {
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-      duration: 0.2,
-      ease: "power2.in",
-    });
-
-    gsap.to(previewRef.current, {
-      opacity: 0,
-      scale: 0.95,
-      duration: 0.3,
-      ease: "power2.out",
-    });
+    if (el) {
+        gsap.killTweensOf(el);
+        gsap.to(el, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", duration: 0.2, ease: "power2.in" });
+        gsap.to(previewRef.current, { opacity: 0, scale: 0.95, duration: 0.3, ease: "power2.out" });
+    }
   };
 
   const handleMouseMove = (e) => {
-    if (window.innerWidth < 768) return;
+    if (showCategories || window.innerWidth < 768) return;
     mouse.current.x = e.clientX + 24;
     mouse.current.y = e.clientY + 24;
     moveX.current(mouse.current.x);
@@ -100,87 +85,101 @@ const Works = () => {
   };
 
   return (
-    <section id="work" className="flex flex-col min-h-screen">
+    <section id="work" className="flex flex-col min-h-screen py-10">
       <AnimatedHeaderSection
-        subTitle={"Just starting out, but ready to make impact"}
-        title={"Projects"}
+        subTitle={showCategories ? "Select Role" : `Portfolio: ${category.toUpperCase()}`}
+        title={title}
         text={text}
         textColor={"text-black"}
         withScrollTrigger={true}
       />
-      <div
-        className="relative flex flex-col font-light"
-        onMouseMove={handleMouseMove}
-      >
-        {projects.map((project, index) => (
-          <a
-            key={project.id}
-            href={project.href}   // 👈 tambahkan link di object projects
-            target="_blank"       // buka di tab baru
-            rel="noopener noreferrer"
-            className="relative flex flex-col gap-1 py-5 cursor-pointer group md:gap-0"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-          >
-            {/* overlay */}
-            <div
-              ref={(el) => {
-                overlayRefs.current[index] = el;
-              }}
-              className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path"
-            />
 
-            {/* title */}
-            <div className="flex justify-between px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
-              <h2 className="lg:text-[32px] text-[26px] leading-none">
-                {project.name}
-              </h2>
-              <Icon icon="lucide:arrow-up-right" className="md:size-6 size-5" />
-            </div>
+      {/* --- LOGIC UTAMA: PASTIKAN STRUKTUR INI TIDAK TERPUTUS --- */}
+      
+      {showCategories ? (
+        // ============================================================
+        // BAGIAN 1: TAMPILAN 3 KARTU (HANYA MUNCUL DI HOME)
+        // ============================================================
+        <div className="flex flex-col md:flex-row gap-6 px-4 md:px-10 mt-10 justify-center items-stretch min-h-[400px]">
+          {/* Card Guru */}
+          <Link to="/guru" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
+             <div className="mb-auto"><Icon icon="ph:chalkboard-teacher-light" className="size-12 mb-4"/></div>
+             <h3 className="text-3xl font-bold mb-2">Guru &<br/>Pendidik</h3>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat proyek pendidikan, modul ajar, dan pengalaman mengajar.</p>
+             <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
+          </Link>
 
-            {/* divider */}
-            <div className="w-full h-0.5 bg-black/80" />
+          {/* Card IT */}
+          <Link to="/web-dev" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
+             <div className="mb-auto"><Icon icon="ph:code-bold" className="size-12 mb-4"/></div>
+             <h3 className="text-3xl font-bold mb-2">Web<br/>Developer</h3>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat proyek website, aplikasi, dan eksplorasi coding.</p>
+             <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
+          </Link>
 
-            {/* framework */}
-            <div className="flex px-10 text-xs leading-loose uppercase transtion-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
-              {project.frameworks.map((framework) => (
-                <p
-                  key={framework.id}
-                  className="text-black transition-colors duration-500 md:group-hover:text-white"
-                >
-                  {framework.name}
-                </p>
-              ))}
-            </div>
-            {/* mobile preview image */}
-            <div className="relative flex items-center justify-center px-10 md:hidden h-[400px]">
-              <img
-                src={project.bgImage}
-                alt={`${project.name}-bg-image`}
-                className="object-cover w-full h-full rounded-md brightness-50"
-              />
-              <img
-                src={project.image}
-                alt={`${project.name}-image`}
-                className="absolute bg-center px-14 rounded-xl"
-              />
-            </div>
-          </a>
-        ))}
-        {/* desktop Flaoting preview image */}
-        <div
-          ref={previewRef}
-          className="fixed -top-2/6 left-0 z-50 overflow-hidden border-8 border-black pointer-events-none w-[960px] md:block hidden opacity-0"
-        >
-          {currentIndex !== null && (
-            <img
-              src={projects[currentIndex].image}
-              alt="preview"
-              className="object-cover w-full h-full"
-            />
-          )}
+          {/* Card Design */}
+          <Link to="/graphic-design" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
+             <div className="mb-auto"><Icon icon="ph:paint-brush-broad" className="size-12 mb-4"/></div>
+             <h3 className="text-3xl font-bold mb-2">Graphic<br/>Design</h3>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat karya 3D, desain poster, dan visual art.</p>
+             <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
+          </Link>
         </div>
-      </div>
+
+      ) : ( 
+        // ============================================================
+        // BAGIAN 2: TAMPILAN LIST PROJECT (HANYA MUNCUL DI SUB-PAGE)
+        // Perhatikan tanda titik dua ( : ) di atas yang memisahkan bagian ini
+        // ============================================================
+        <div className="relative flex flex-col font-light mt-10" onMouseMove={handleMouseMove}>
+          {filteredProjects.map((project, index) => (
+            <a
+              key={index}
+              href={project.source_code_link || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative flex flex-col gap-1 py-8 border-t border-black/10 cursor-pointer group md:gap-0"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+              id="project"
+            >
+              {/* Overlay Hitam */}
+              <div ref={(el) => { overlayRefs.current[index] = el; }} className="absolute inset-0 hidden md:block duration-200 bg-black -z-10 clip-path" />
+              
+              {/* Judul Project */}
+              <div className="flex justify-between px-4 md:px-10 text-black transition-all duration-500 md:group-hover:px-12 md:group-hover:text-white">
+                <h2 className="lg:text-[40px] text-[28px] font-medium leading-none">{project.name}</h2>
+                <Icon icon="lucide:arrow-up-right" className="md:size-8 size-6" />
+              </div>
+
+              {/* Tags / Categories */}
+              <div className="flex px-4 md:px-10 mt-2 text-xs leading-loose uppercase transition-all duration-500 md:text-sm gap-x-5 md:group-hover:px-12">
+                {project.tags && project.tags.map((tag, i) => (
+                  <p key={i} className="text-black/60 transition-colors duration-500 md:group-hover:text-white/80">#{tag.name}</p>
+                ))}
+              </div>
+
+              {/* Mobile Image */}
+              <div className="relative flex items-center justify-center px-4 md:hidden h-[250px] mt-4">
+                <img src={project.image} alt={project.name} className="object-cover w-full h-full rounded-md brightness-75" />
+              </div>
+            </a>
+          ))}
+
+          {/* Desktop Floating Image */}
+          <div ref={previewRef} className="fixed -top-2/6 left-0 z-50 overflow-hidden border-4 border-black pointer-events-none w-[400px] h-[250px] md:block hidden opacity-0 bg-white">
+             {currentIndex !== null && filteredProjects[currentIndex] && (
+               <img src={filteredProjects[currentIndex].image} alt="preview" className="object-cover w-full h-full" />
+             )}
+          </div>
+          
+          {/* Tombol Back to Home */}
+          <div className="w-full flex justify-center mt-20">
+            <Link to="/" className="text-lg underline hover:text-gray-500">← Back to All Categories</Link>
+          </div>
+        </div>
+      )} 
+      {/* Pastikan kurung kurawal tutup ini ada! */}
     </section>
   );
 };
