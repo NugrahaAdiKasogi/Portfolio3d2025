@@ -3,6 +3,7 @@ import Navbar from "../sections/Navbar";
 import Hero from "../sections/Hero"; 
 import Works from "../sections/Works";
 import Contact from "../sections/Contact";
+import HeroGuru from "../sections/HeroGuru";
 
 const GuruPage = () => {
   return (
@@ -10,7 +11,7 @@ const GuruPage = () => {
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Navbar />
         {/* Nanti di sini kamu bisa ganti jadi <HeroGuru /> jika sudah bikin komponennya */}
-        <Hero /> 
+        <HeroGuru />
       </div>
       
       {/* Panggil Works dengan filter 'guru' dan matikan mode kartu */}
