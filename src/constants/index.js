@@ -100,7 +100,7 @@ export const projects = [
       { id: 3, name: "Tailwind CSS" },
       { id: 4, name: "Vite" },
     ],
-    category: ["it"], // Ubah jadi Array
+    category: ["it"], 
     
     // Config untuk Pop Up
     modalConfig: {

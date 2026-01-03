@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../sections/Navbar";
+import NavbarPage from "../components/NavbarPage";
 import Hero from "../sections/Hero"; 
 import Works from "../sections/Works";
 import Contact from "../sections/Contact";
@@ -9,7 +9,7 @@ const DesignPage = () => {
   return (
     <div className="relative z-0 bg-primary">
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <Navbar />
+        <NavbarPage />
         {/* Nanti di sini kamu bisa ganti jadi <HeroDesign /> jika sudah bikin komponennya */}
         <Hero /> 
       </div>
