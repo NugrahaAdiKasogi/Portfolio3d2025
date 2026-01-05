@@ -107,22 +107,22 @@ const Works = ({ category = "all", showCategories = false }) => {
           {/* Card Guru */}
           <Link to="/guru" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
              <div className="mb-auto"><Icon icon="ph:chalkboard-teacher-light" className="size-12 mb-4"/></div>
-             <h3 className="text-3xl font-bold mb-2">Guru &<br/>Pendidik</h3>
-             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat proyek pendidikan, modul ajar, dan pengalaman mengajar.</p>
+             <h3 className="text-3xl font-bold mb-2">Teacher<br/>Edutech</h3>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">See educational projects, teaching modules, and teaching experience.</p>
              <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
           </Link>
           {/* Card IT */}
           <Link to="/web-dev" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
              <div className="mb-auto"><Icon icon="ph:code-bold" className="size-12 mb-4"/></div>
              <h3 className="text-3xl font-bold mb-2">Web<br/>Developer</h3>
-             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat proyek website, aplikasi, dan eksplorasi coding.</p>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">See website projects, applications, and coding explorations.</p>
              <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
           </Link>
           {/* Card Design */}
           <Link to="/graphic-design" className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl">
              <div className="mb-auto"><Icon icon="ph:paint-brush-broad" className="size-12 mb-4"/></div>
              <h3 className="text-3xl font-bold mb-2">Graphic<br/>Design</h3>
-             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">Lihat karya 3D, desain poster, dan visual art.</p>
+             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">See creative works, poster designs, and visual art.</p>
              <div className="absolute top-6 right-6"><Icon icon="lucide:arrow-right" className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"/></div>
           </Link>
         </div>
