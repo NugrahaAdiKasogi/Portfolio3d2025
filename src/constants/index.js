@@ -84,7 +84,7 @@ export const projects = [
     description: "An islamic gamification platform for tracking ibadah.",
     href: "https://jannah-quest.vercel.app/",
     image: "/assets/projects/jannah.png",
-    bgImage: "/assets/backgrounds/map.jpg",
+    bgImage: "/assets/projects/jannah.png",
     frameworks: [{
         id: 1,
         name: "Next.js"
@@ -122,7 +122,7 @@ export const projects = [
     description: "A showcase of my creative work, including graphic design, web development, and more.",
     href: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
     image: "/assets/projects/portfolio.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/projects/portfolio.png",
     frameworks: [{
         id: 1,
         name: "Behance"
@@ -157,7 +157,7 @@ export const projects = [
     description: "An edugame that teaches cooking skills through interactive lessons.",
     href: "https://kitchen-code.vercel.app",
     image: "/assets/projects/kitchen.png",
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    bgImage: "/assets/projects/kitchen.png",
     frameworks: [{
         id: 1,
         name: "Unity3d"
@@ -184,7 +184,7 @@ export const projects = [
       mainButtonLink: "https://kitchen-code.vercel.app",
       // 👇 Request kamu: Button Pitch Deck UX
       secondaryButtonText: "Pitch Deck (UX)",
-      secondaryButtonLink: "#", // Masukkan link PDF/Drive di sini nanti
+      secondaryButtonLink: "https://docs.google.com/presentation/d/1iAJjKsKyhDFmvqy2OB7hHJOb7ygs_XKV/edit?usp=drive_link&ouid=109481048810043474391&rtpof=true&sd=true", // Masukkan link PDF/Drive di sini nanti
     },
   },
 
@@ -195,7 +195,7 @@ export const projects = [
     description: "A landing page for a period tracking app focused on user engagement.",
     href: "https://ukdm-upi.netlify.app/",
     image: "/assets/projects/Falah.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    bgImage: "/assets/projects/Falah.png",
     frameworks: [{
         id: 1,
         name: "HTML"
@@ -227,8 +227,8 @@ export const projects = [
     name: "LMS Adaptive Learning",
     description: "AI-powered learning management system (Work In Progress).",
     href: "#",
-    image: "/assets/projects/portfolio.png", // Placeholder image
-    bgImage: "/assets/backgrounds/table.jpg",
+    image: "/assets/projects/LMSAdapt.png", // Placeholder image
+    bgImage: "/assets/projects/LMSAdapt.png",
     frameworks: [{
         id: 1,
         name: "Next.js"
@@ -259,8 +259,8 @@ export const projects = [
     name: "Kurikulum IT Sekolah",
     description: "Rancangan silabus dan ATP TIK untuk jenjang SMP/SMA.",
     href: "#",
-    image: "/assets/projects/portfolio.png", // Placeholder image document
-    bgImage: "/assets/backgrounds/map.jpg",
+    image: "/assets/projects/Kurikulum.png", // Placeholder image document
+    bgImage: "/assets/projects/Kurikulum.png",
     frameworks: [{
         id: 1,
         name: "Curriculum Dev"
@@ -286,8 +286,8 @@ export const projects = [
     name: "Modul Ajar Informatika",
     description: "E-Book dan modul praktikum interaktif kelas 10.",
     href: "#",
-    image: "/assets/projects/portfolio.png", // Placeholder
-    bgImage: "/assets/backgrounds/blanket.jpg",
+    image: "/assets/projects/modul.png", // Placeholder
+    bgImage: "/assets/projects/modul.png",
     frameworks: [{
         id: 1,
         name: "Canva"
@@ -317,8 +317,8 @@ export const projects = [
     name: "Interactive Slides",
     description: "Kumpulan slide presentasi materi ajar yang interaktif.",
     href: "#",
-    image: "/assets/projects/portfolio.png",
-    bgImage: "/assets/backgrounds/poster.jpg",
+    image: "/assets/projects/ppt.png",
+    bgImage: "/assets/projects/ppt.png",
     frameworks: [{
         id: 1,
         name: "Google Slides"
@@ -349,8 +349,8 @@ export const projects = [
     name: "Motion Graphic Edu",
     description: "Video animasi operasi dasar struktur pemrograman.",
     href: "#",
-    image: "/assets/projects/portfolio.png",
-    bgImage: "/assets/backgrounds/curtains.jpg",
+    image: "/assets/projects/motion.png",
+    bgImage: "/assets/projects/motion.png",
     frameworks: [{
         id: 1,
         name: "After Effects"
