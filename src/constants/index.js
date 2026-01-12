@@ -85,21 +85,22 @@ export const projects = [
     href: "https://jannah-quest.vercel.app/",
     image: "/assets/projects/jannah.png",
     bgImage: "/assets/projects/jannah.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Next.js"
+        name: "Next.js",
       },
       {
         id: 2,
-        name: "Supabase"
+        name: "Supabase",
       },
       {
         id: 3,
-        name: "Tailwind CSS"
+        name: "Tailwind CSS",
       },
       {
         id: 4,
-        name: "Vite"
+        name: "Vite",
       },
     ],
     category: ["it"],
@@ -107,7 +108,8 @@ export const projects = [
     // Config untuk Pop Up
     modalConfig: {
       type: "web",
-      description: "Jannah Quest helps users track their daily worship activities with gamification elements to keep them motivated.",
+      description:
+        "Jannah Quest helps users track their daily worship activities with gamification elements to keep them motivated.",
       mainButtonText: "Live Demo",
       mainButtonLink: "https://jannah-quest.vercel.app/",
     },
@@ -119,34 +121,38 @@ export const projects = [
   {
     id: 2,
     name: "My Creative Portfolio",
-    description: "A showcase of my creative work, including graphic design, web development, and more.",
+    description:
+      "A showcase of my creative work, including graphic design, web development, and more.",
     href: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
     image: "/assets/projects/portfolio.png",
     bgImage: "/assets/projects/portfolio.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Behance"
+        name: "Behance",
       },
       {
         id: 2,
-        name: "Photoshop"
+        name: "Photoshop",
       },
       {
         id: 3,
-        name: "Figma"
+        name: "Figma",
       },
       {
         id: 4,
-        name: "Illustrator"
+        name: "Illustrator",
       },
     ],
     category: ["design"],
 
     modalConfig: {
       type: "web", // Link ke Behance
-      description: "A comprehensive collection of my visual works, branding, and UI/UX explorations.",
+      description:
+        "A comprehensive collection of my visual works, branding, and UI/UX explorations.",
       mainButtonText: "View on Behance",
-      mainButtonLink: "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
+      mainButtonLink:
+        "https://www.behance.net/gallery/228214801/Creative-Portfolio-2025",
     },
   },
 
@@ -154,37 +160,41 @@ export const projects = [
   {
     id: 3,
     name: "Kitchen Code",
-    description: "An edugame that teaches cooking skills through interactive lessons.",
+    description:
+      "An edugame that teaches cooking skills through interactive lessons.",
     href: "https://kitchen-code.vercel.app",
     image: "/assets/projects/kitchen.png",
     bgImage: "/assets/projects/kitchen.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Unity3d"
+        name: "Unity3d",
       },
       {
         id: 2,
-        name: "Next.js"
+        name: "Next.js",
       },
       {
         id: 3,
-        name: "Node.js"
+        name: "Node.js",
       },
       {
         id: 4,
-        name: "WebGL"
+        name: "WebGL",
       },
     ],
     category: ["guru", "it"], // 🔥 Masuk Dua Kategori
 
     modalConfig: {
       type: "web",
-      description: "Kitchen Code combines gaming and education to make learning cooking logic fun and interactive. Built with Unity WebGL embedded in Next.js.",
+      description:
+        "Kitchen Code combines gaming and education to make learning cooking logic fun and interactive. Built with Unity WebGL embedded in Next.js.",
       mainButtonText: "Play Demo",
       mainButtonLink: "https://kitchen-code.vercel.app",
       // 👇 Request kamu: Button Pitch Deck UX
       secondaryButtonText: "Pitch Deck (UX)",
-      secondaryButtonLink: "https://docs.google.com/presentation/d/1iAJjKsKyhDFmvqy2OB7hHJOb7ygs_XKV/edit?usp=drive_link&ouid=109481048810043474391&rtpof=true&sd=true", // Masukkan link PDF/Drive di sini nanti
+      secondaryButtonLink:
+        "https://docs.google.com/presentation/d/1iAJjKsKyhDFmvqy2OB7hHJOb7ygs_XKV/edit?usp=drive_link&ouid=109481048810043474391&rtpof=true&sd=true", // Masukkan link PDF/Drive di sini nanti
     },
   },
 
@@ -192,28 +202,31 @@ export const projects = [
   {
     id: 4,
     name: "Falah Period Page",
-    description: "A landing page for a period tracking app focused on user engagement.",
+    description:
+      "A landing page for a period tracking app focused on user engagement.",
     href: "https://ukdm-upi.netlify.app/",
     image: "/assets/projects/Falah.png",
     bgImage: "/assets/projects/Falah.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "HTML"
+        name: "HTML",
       },
       {
         id: 2,
-        name: "CSS"
+        name: "CSS",
       },
       {
         id: 3,
-        name: "JavaScript"
+        name: "JavaScript",
       },
     ],
     category: ["it"],
 
     modalConfig: {
       type: "web",
-      description: "A responsive landing page designed to introduce the Falah application features to new users.",
+      description:
+        "A responsive landing page designed to introduce the Falah application features to new users.",
       mainButtonText: "Visit Site",
       mainButtonLink: "https://ukdm-upi.netlify.app/",
     },
@@ -229,24 +242,26 @@ export const projects = [
     href: "#",
     image: "/assets/projects/LMSAdapt.png", // Placeholder image
     bgImage: "/assets/projects/LMSAdapt.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Next.js"
+        name: "Next.js",
       },
       {
         id: 2,
-        name: "OpenAI API"
+        name: "OpenAI API",
       },
       {
         id: 3,
-        name: "PostgreSQL"
+        name: "PostgreSQL",
       },
     ],
     category: ["guru", "it"], // 🔥 Masuk Dua Kategori
 
     modalConfig: {
       type: "coming_soon", // Tipe khusus coming soon
-      description: "Project ini sedang dikembangkan untuk menciptakan pengalaman belajar yang personal menggunakan AI.",
+      description:
+        "Project ini sedang dikembangkan untuk menciptakan pengalaman belajar yang personal menggunakan AI.",
       // Tidak ada button link karena coming soon
     },
 
@@ -257,26 +272,29 @@ export const projects = [
   {
     id: 6,
     name: "Kurikulum IT Sekolah",
-    description: "Rancangan silabus dan ATP TIK untuk jenjang SMP/SMA.",
-    href: "#",
+    description: "Rancangan silabus dan ATP TIK untuk jenjang SMK/SMA.",
+    href: "https://drive.google.com/file/d/1tKRqc_1W16Yg6iESnciOYBVqEVkR-rVg/view?usp=sharing",
     image: "/assets/projects/Kurikulum.png", // Placeholder image document
     bgImage: "/assets/projects/Kurikulum.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Curriculum Dev"
+        name: "Curriculum Dev",
       },
       {
         id: 2,
-        name: "Education"
+        name: "Education",
       },
     ],
     category: ["guru"],
 
     modalConfig: {
       type: "pdf",
-      description: "Dokumen restrukturisasi kurikulum IT yang disesuaikan dengan kebutuhan industri.",
+      description:
+        "Dokumen restrukturisasi kurikulum IT yang disesuaikan dengan kebutuhan industri.",
       mainButtonText: "Download PDF",
-      mainButtonLink: "#", // Link Download PDF
+      mainButtonLink:
+        "https://drive.google.com/file/d/1tKRqc_1W16Yg6iESnciOYBVqEVkR-rVg/view?usp=sharing", // Link Download PDF
     },
   },
 
@@ -285,29 +303,33 @@ export const projects = [
     id: 7,
     name: "Modul Ajar Informatika",
     description: "E-Book dan modul praktikum interaktif kelas 10.",
-    href: "#",
+    href: "https://drive.google.com/file/d/1UfX0pyu_FZNHNVjudqB37BzqGcNMzKWX/view?usp=sharing",
     image: "/assets/projects/modul.png", // Placeholder
     bgImage: "/assets/projects/modul.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Canva"
+        name: "Canva",
       },
       {
         id: 2,
-        name: "Writing"
+        name: "Writing",
       },
     ],
     category: ["guru"],
 
     modalConfig: {
       type: "pdf",
-      description: "Modul ajar berbasis Project Based Learning (PjBL) untuk materi Algoritma.",
+      description:
+        "Modul ajar berbasis Project Based Learning (PjBL) untuk materi Algoritma.",
       mainButtonText: "Baca Modul",
-      mainButtonLink: "https://drive.google.com/file/d/1UfX0pyu_FZNHNVjudqB37BzqGcNMzKWX/view?usp=sharing", // Link Download PDF
+      mainButtonLink:
+        "https://drive.google.com/file/d/1UfX0pyu_FZNHNVjudqB37BzqGcNMzKWX/view?usp=sharing", // Link Download PDF
 
       // 🔥 TOMBOL KEDUA (See More / Link Drive)
       secondaryButtonText: "Lihat Modul Lainnya (Drive)",
-      secondaryButtonLink: "https://drive.google.com/drive/folders/1x_Fgd2NCF-kMfw3bXAvai-eFRFqSBk45?usp=drive_link", // Link Folder Drive Kamu
+      secondaryButtonLink:
+        "https://drive.google.com/drive/folders/1x_Fgd2NCF-kMfw3bXAvai-eFRFqSBk45?usp=drive_link", // Link Folder Drive Kamu
     },
   },
 
@@ -316,16 +338,17 @@ export const projects = [
     id: 8,
     name: "Interactive Slides",
     description: "Kumpulan slide presentasi materi ajar yang interaktif.",
-    href: "#",
+    href: "https://drive.google.com/drive/folders/1KFt22hLulzNGlnhAU3qe6XG1ssIv27xY?usp=sharing", // Link Folder Drive Kamu
     image: "/assets/projects/ppt.png",
     bgImage: "/assets/projects/ppt.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "Google Slides"
+        name: "Google Slides",
       },
       {
         id: 2,
-        name: "Design"
+        name: "Design",
       },
     ],
     category: ["guru"],
@@ -333,13 +356,16 @@ export const projects = [
     modalConfig: {
       type: "slide",
       description: "Kumpulan materi ajar visual yang digunakan di kelas.",
-      embedUrl: "https://docs.google.com/presentation/d/e/2PACX-1vR4Uqy62PQyfP0yMndKwDi414EnItLQ-lwogwGQMxwFOAQAbqfdTLtXcA1lwucX4Q/pubembed?start=false&loop=false&delayms=3000", // Ganti link embed nanti
+      embedUrl:
+        "https://docs.google.com/presentation/d/e/2PACX-1vR4Uqy62PQyfP0yMndKwDi414EnItLQ-lwogwGQMxwFOAQAbqfdTLtXcA1lwucX4Q/pubembed?start=false&loop=false&delayms=3000", // Ganti link embed nanti
       mainButtonText: "Open Fullscreen",
-      mainButtonLink: "https://docs.google.com/presentation/d/e/2PACX-1vR4Uqy62PQyfP0yMndKwDi414EnItLQ-lwogwGQMxwFOAQAbqfdTLtXcA1lwucX4Q/pub?start=false&loop=false&delayms=3000",
+      mainButtonLink:
+        "https://docs.google.com/presentation/d/e/2PACX-1vR4Uqy62PQyfP0yMndKwDi414EnItLQ-lwogwGQMxwFOAQAbqfdTLtXcA1lwucX4Q/pub?start=false&loop=false&delayms=3000",
 
       // 🔥 TOMBOL KEDUA (See More / Link Drive)
       secondaryButtonText: "Lihat PPT (Drive)",
-      secondaryButtonLink: "https://drive.google.com/drive/folders/1KFt22hLulzNGlnhAU3qe6XG1ssIv27xY?usp=sharing", // Link Folder Drive Kamu
+      secondaryButtonLink:
+        "https://drive.google.com/drive/folders/1KFt22hLulzNGlnhAU3qe6XG1ssIv27xY?usp=sharing", // Link Folder Drive Kamu
     },
   },
 
@@ -348,30 +374,33 @@ export const projects = [
     id: 9,
     name: "Motion Graphic Edu",
     description: "Video animasi operasi dasar struktur pemrograman.",
-    href: "#",
+    href: "https://www.https://www.youtube.com/playlist?list=PLgO-mAWqsuSlJtdkbAU8osWJzknnQyNUm.com/embed/M5SBoAylnP4?si=ABB38WUAEKg_smR3",
     image: "/assets/projects/motion.png",
     bgImage: "/assets/projects/motion.png",
-    frameworks: [{
+    frameworks: [
+      {
         id: 1,
-        name: "After Effects"
+        name: "After Effects",
       },
       {
         id: 2,
-        name: "Illustrator"
+        name: "Illustrator",
       },
     ],
     category: ["guru"], // Bisa ditambah "design" jika mau
 
     modalConfig: {
       type: "video",
-      description: "Visualisasi konsep abstrak komputer menjadi animasi 2D yang mudah dipahami siswa.",
+      description:
+        "Visualisasi konsep abstrak komputer menjadi animasi 2D yang mudah dipahami siswa.",
       embedUrl: "https://www.youtube.com/embed/M5SBoAylnP4?si=ABB38WUAEKg_smR3", // Ganti ID video youtube nanti
       mainButtonText: "Watch on YouTube",
       mainButtonLink: "#",
 
       // 🔥 TOMBOL KEDUA (See More / Link Playlist)
       secondaryButtonText: "Lihat Playlist Lengkap",
-      secondaryButtonLink: "https://www.youtube.com/playlist?list=PLgO-mAWqsuSlJtdkbAU8osWJzknnQyNUm", // Link Playlist/Channel
+      secondaryButtonLink:
+        "https://www.youtube.com/playlist?list=PLgO-mAWqsuSlJtdkbAU8osWJzknnQyNUm", // Link Playlist/Channel
     },
   },
 ];

@@ -18,37 +18,39 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
-    <ReactLenis root>
+    <ReactLenis root className="relative w-full min-h-screen overflow-x-hidden">
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
           {/* === HALAMAN UTAMA (LANDING) === */}
-          <Route path="/" element={
-            <div className='relative z-0 bg-primary'>
-              <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-                <Navbar />
-                <Hero />
+          <Route
+            path="/"
+            element={
+              <div className="relative z-0 bg-primary">
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                  <Navbar />
+                  <Hero />
+                </div>
+                <ServiceSummary />
+                <Services />
+                <About />
+                {/* Di Home, Tampilkan Mode KARTU (showCategories={true}) */}
+                <Works showCategories={true} />
+                <div className="relative z-0">
+                  <Contact />
+                </div>
               </div>
-              <ServiceSummary />
-              <Services />
-              <About />
-              {/* Di Home, Tampilkan Mode KARTU (showCategories={true}) */}
-              <Works showCategories={true} /> 
-              <div className='relative z-0'>
-                <Contact />
-              </div>
-            </div>
-          } />
+            }
+          />
 
           {/* === HALAMAN CABANG (PAGES MURNI) === */}
           <Route path="/guru" element={<GuruPage />} />
           <Route path="/web-dev" element={<WebDevPage />} />
           <Route path="/graphic-design" element={<DesignPage />} />
-          
         </Routes>
       </BrowserRouter>
     </ReactLenis>
   );
-}
+};
 
 export default App;

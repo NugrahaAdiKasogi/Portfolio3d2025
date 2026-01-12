@@ -100,7 +100,7 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
         ref={modalRef}
         // Tambahkan 'overscroll-contain' biar scroll mentok gak nular ke body
         // Tambahkan 'data-lenis-prevent' sebagai pengaman tambahan
-        className="bg-[#101010] border border-white/10 w-full max-w-4xl max-h-[90vh] overflow-y-auto overscroll-contain rounded-2xl relative shadow-2xl flex flex-col"
+        className="bg-[#101010] border border-white/10 w-full max-w-4xl max-h-[90vh] overflow-y-auto overscroll-contain rounded-2xl relative shadow-2xl flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         data-lenis-prevent 
       >

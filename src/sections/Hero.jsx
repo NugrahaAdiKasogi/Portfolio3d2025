@@ -62,7 +62,7 @@ const Hero = () => {
   Educator at heart. Problem-solver by nature.`;
 
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen">
+    <section id="home" className="flex flex-col justify-end min-h-screen overflow-hidden">
       <AnimatedHeaderSection
         subTitle={"STATUS: 200 OK. Ready to Deploy."}
         title={"Nugraha"}
@@ -88,7 +88,7 @@ const Hero = () => {
       </div>
       {/* === AKHIR BLOK TOMBOL === */}
 
-      <figure className="absolute inset-0 -z-50 w-screen h-screen">
+      <figure className="absolute inset-0 -z-50 w-full h-screen">
         <Canvas
           shadows
           camera={{

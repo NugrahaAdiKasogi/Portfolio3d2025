@@ -4,7 +4,7 @@ import oldPc from "/images/old-pc.png"; // gambar komputer jadul (transparan)
 
 const Terminal = () => {
   return (
-    <div className="relative w-[700px] mx-auto ">
+    <div className="relative w-[700px] mx-auto overflow-hidden sm:w-[90%] md:w-[600px] lg:w-[700px]">
       {/* Gambar komputer */}
       <img src={oldPc} alt="Retro PC" className="w-full" />
 

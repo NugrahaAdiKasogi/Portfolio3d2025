@@ -106,13 +106,30 @@
   }
 }
 
+/* Tambahkan ini agar scroll horizontal benar-benar mati di level root */
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   background: #ffffff;
   color: black;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden;  <-- Pindahkan penanganan overflow agar lebih robust (lihat bawah) */
   font-family: var(--font-amiamie);
+
+  /* Tambahan untuk memastikan body tidak melebihi viewport */
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
+
+/* Hapus nanti setelah ketemu masalahnya
+* {
+  outline: 1px solid red;
+} */
 
 @utility clip-path {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
@@ -134,3 +151,22 @@ body {
   @apply text-[42px] sm:text-[52px] md:text-[62px] lg:text-[100px];
 }
 
+/* --- LENIS FIX --- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* KUNCI FINAL: Paksa hidden di root element saat Lenis aktif */
+html.lenis {
+  width: 100%;
+  overflow-x: hidden !important;
+}
