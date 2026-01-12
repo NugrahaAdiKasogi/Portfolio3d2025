@@ -1,6 +1,6 @@
 import React from "react";
 import NavbarPage from "../components/NavbarPage";
-import Hero from "../sections/Hero"; 
+import HeroDesign from "../sections/HeroDesign";
 import Works from "../sections/Works";
 import Contact from "../sections/Contact";
 
@@ -11,7 +11,7 @@ const DesignPage = () => {
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <NavbarPage />
         {/* Nanti di sini kamu bisa ganti jadi <HeroDesign /> jika sudah bikin komponennya */}
-        <Hero /> 
+        <HeroDesign />
       </div>
       
       {/* Panggil Works dengan filter 'design' dan matikan mode kartu */}
