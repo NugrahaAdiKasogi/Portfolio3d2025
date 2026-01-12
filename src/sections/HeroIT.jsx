@@ -109,6 +109,20 @@ const HeroIT = () => {
             <span className="text-green-400">➜</span>{" "}
             <span className="inline-block w-2 h-4 bg-gray-500 align-middle ml-1" />
           </div>
+
+          {/* Di dalam konten terminal */}
+          <div className="mb-4">
+            <span className="text-green-400">➜</span>{" "}
+            <span className="text-blue-400">~</span>
+            <span className="text-purple-400"> wget</span>
+            <a
+              href="/cv/cv-web.pdf"
+              download
+              className="text-yellow-400 hover:underline ml-2"
+            >
+              ./cv-fullstack.pdf
+            </a>
+          </div>
         </div>
       </div>
     </section>

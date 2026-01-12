@@ -88,10 +88,16 @@ const HeroDesign = () => {
       </div>
 
       {/* Floating Badge */}
-      <div className="absolute bottom-10 right-10 flex items-center gap-4 bg-black text-white px-6 py-3 rounded-full shadow-xl animate-bounce">
-        <Icon icon="ph:paint-brush-broad-fill" className="size-6" />
-        <span className="font-bold">Scroll to Explore Gallery</span>
-      </div>
+      <a
+        href="/cv/cv-design.pdf"
+        download
+        className="absolute bottom-10 right-10 flex items-center gap-4 bg-black text-white px-6 py-3 rounded-full shadow-xl hover:scale-110 transition-transform cursor-pointer z-50 group"
+      >
+        <div className="bg-white text-black p-2 rounded-full">
+          <Icon icon="ph:file-pdf-bold" className="size-5" />
+        </div>
+        <span className="font-bold pr-2">Download Resume</span>
+      </a>
     </section>
   );
 };

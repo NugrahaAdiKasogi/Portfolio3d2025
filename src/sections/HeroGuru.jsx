@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { styles } from "../styles";
-
+import { Icon } from "@iconify/react/dist/iconify.js";
 // Import gambar dokumentasi kamu disini
 // Sementara saya pakai placeholder dari assets yang ada
 // --- GANTI BAGIAN IMPORT GAMBAR DENGAN INI ---
@@ -94,16 +94,36 @@ const HeroGuru = () => {
           </div>
 
           <div className="hero-text-item pt-4">
-            <button
-              onClick={() =>
-                document
-                  .getElementById("work")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-[#121aff] hover:text-white transition-all duration-300 shadow-lg shadow-[#ffcd35]/20"
-            >
-              See Materials & Works
-            </button>
+            {/* --- AREA TOMBOL --- */}
+            <div className="hero-text-item pt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
+              {/* 1. Tombol Utama (Existing) */}
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("work")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-[#915eff] hover:text-white transition-all duration-300 shadow-lg shadow-[#915eff]/20 flex items-center gap-2"
+              >
+                See My Work
+                <Icon icon="lucide:arrow-right-circle" className="size-5" />
+              </button>
+
+              {/* 2. Tombol Download CV (Baru) */}
+              <a
+                href="/cv/cv-guru.pdf" // Ganti sesuai lokasi file kamu
+                download="CV_Nugraha_Guru_2026.pdf" // Nama file saat didownload user
+                className="group"
+              >
+                <button className="border-2 border-white/30 text-black font-medium py-3 px-8 rounded-full hover:bg-[#915eff] hover:text-primary transition-all duration-300 flex items-center gap-2 backdrop-blur-sm">
+                  <Icon
+                    icon="lucide:download"
+                    className="size-5 group-hover:animate-bounce"
+                  />
+                  Download CV
+                </button>
+              </a>
+            </div>
           </div>
         </div>
 
