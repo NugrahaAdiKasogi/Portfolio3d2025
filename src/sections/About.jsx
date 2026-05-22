@@ -7,12 +7,13 @@ import gsap from "gsap";
 const About = () => {
   const text = `A developer with a designer's eye.
 A communicator with a teacher's clarity.
+A data practitioner who uncovers hidden patterns.
 A problem-solver who delivers results.`;
 
-  const aboutText = `My passion lies at the intersection of technology, design, and communication.
-With a background in Computer Science Education, I combine technical logic with human-centered thinking to turn complex ideas into intuitive digital experiences.
-I’ve built full-stack applications, designed UI/UX systems in Figma, and led teams to win a 1st Place National Digital Innovation Competition.
-Now, I’m looking to contribute in a role where I can blend development, design, and creative problem-solving to build impactful, user-focused products.`;
+  const aboutText = `My passion lies at the intersection of technology, design, and data-driven storytelling. 
+With a background in Computer Science Education, I combine technical logic with human-centered thinking to turn complex challenges into intuitive digital experiences and robust data pipelines. 
+I’ve built full-stack applications, engineered ETL processes using modern cloud architectures, designed UI/UX systems in Figma, and led teams to win a 1st Place National Digital Innovation Competition. 
+Now, I’m looking to contribute in a role where I can blend development, design, and data analytics to build impactful, user-focused products.`;
   const imgRef = useRef(null);
   useGSAP(() => {
     gsap.to("#about", {

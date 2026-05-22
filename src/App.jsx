@@ -7,12 +7,13 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Works from "./sections/Works";
 import Contact from "./sections/Contact";
-import Services from "./sections/Services"; // Tambahan section di home
+import Services from "./sections/Services"; 
 
 // Import Pages Baru Kamu
 import GuruPage from "./pages/GuruPage";
 import WebDevPage from "./pages/WebDevPage";
 import DesignPage from "./pages/DesignPage";
+import DataPage from "./pages/DataPage";
 import ServiceSummary from "./sections/ServiceSummary";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/guru" element={<GuruPage />} />
           <Route path="/web-dev" element={<WebDevPage />} />
           <Route path="/graphic-design" element={<DesignPage />} />
+          <Route path="/data" element={<DataPage/>} />
         </Routes>
       </BrowserRouter>
     </ReactLenis>

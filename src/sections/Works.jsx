@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
-import ProjectModal from "../components/ProjectModal"; // 👈 Import Modal Baru
+import ProjectModal from "../components/ProjectModal"; // 
 
 const Works = ({ category = "all", showCategories = false }) => {
   const overlayRefs = useRef([]);
@@ -214,6 +214,31 @@ const Works = ({ category = "all", showCategories = false }) => {
             </h3>
             <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">
               See creative works, poster designs, and visual art.
+            </p>
+            <div className="absolute top-6 right-6">
+              <Icon
+                icon="lucide:arrow-right"
+                className="size-6 -rotate-45 group-hover:rotate-0 transition-transform duration-500"
+              />
+            </div>
+          </Link>
+
+          {/* Card Data */}
+          <Link
+            to="/data"
+            className="flex-1 group relative border-2 border-black p-8 flex flex-col justify-end hover:bg-black hover:text-white transition-all duration-500 cursor-pointer min-h-[300px] rounded-xl"
+          >
+            <div className="mb-auto">
+              {/* Ikon Database dari Iconify (Phospor Icons untuk matching dengan yang lain) */}
+              <Icon icon="ph:database-bold" className="size-12 mb-4" />
+            </div>
+            <h3 className="text-3xl font-bold mb-2">
+              Data
+              <br />
+              Practitioner
+            </h3>
+            <p className="text-sm opacity-70 group-hover:opacity-100 transition-opacity">
+              See data pipelines, ETL processes, and enterprise dashboards.
             </p>
             <div className="absolute top-6 right-6">
               <Icon
