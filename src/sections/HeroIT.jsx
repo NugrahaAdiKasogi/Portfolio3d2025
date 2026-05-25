@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { TypeAnimation } from "react-type-animation"; // Install dulu: npm i react-type-animation
+import React, { useRef } from 'react';
+import { Icon } from '@iconify/react/dist/iconify.js';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { TypeAnimation } from 'react-type-animation';
+import { cvLinks } from '../constants';
 
 const HeroIT = () => {
   const containerRef = useRef(null);
@@ -10,20 +11,20 @@ const HeroIT = () => {
   useGSAP(
     () => {
       // Animasi Pop Up Terminal
-      gsap.from(".terminal-window", {
+      gsap.from('.terminal-window', {
         scale: 0.8,
         opacity: 0,
         duration: 1,
-        ease: "back.out(1.7)",
+        ease: 'back.out(1.7)',
         delay: 0.5,
       });
 
       // Animasi Background Grid bergerak
-      gsap.to(".bg-grid", {
-        backgroundPosition: "100px 100px",
+      gsap.to('.bg-grid', {
+        backgroundPosition: '100px 100px',
         duration: 20,
         repeat: -1,
-        ease: "linear",
+        ease: 'linear',
       });
     },
     { scope: containerRef }
@@ -39,8 +40,8 @@ const HeroIT = () => {
         className="absolute inset-0 bg-grid opacity-20"
         style={{
           backgroundImage:
-            "linear-gradient(#30363d 1px, transparent 1px), linear-gradient(90deg, #30363d 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
+            'linear-gradient(#30363d 1px, transparent 1px), linear-gradient(90deg, #30363d 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
@@ -63,8 +64,8 @@ const HeroIT = () => {
         {/* Body Terminal */}
         <div className="p-6 md:p-10 font-mono text-sm md:text-base h-[400px] text-gray-300">
           <div className="mb-4">
-            <span className="text-green-400">➜</span>{" "}
-            <span className="text-blue-400">~</span>{" "}
+            <span className="text-green-400">➜</span>{' '}
+            <span className="text-blue-400">~</span>{' '}
             <span className="text-purple-400">whoami</span>
           </div>
           <div className="mb-6 text-white">
@@ -74,27 +75,27 @@ const HeroIT = () => {
           </div>
 
           <div className="mb-4">
-            <span className="text-green-400">➜</span>{" "}
-            <span className="text-blue-400">~</span>{" "}
+            <span className="text-green-400">➜</span>{' '}
+            <span className="text-blue-400">~</span>{' '}
             <span className="text-purple-400">npm run start-skills</span>
           </div>
 
           {/* Typing Effect */}
           <div className="text-green-400">
-            <span>{">"} Loading modules...</span>
+            <span>{'>'} Loading modules...</span>
             <br />
-            <span>{">"} </span>
+            <span>{'>'} </span>
             <TypeAnimation
               sequence={[
-                "Installing React.js...",
+                'Installing React.js...',
                 1000,
-                "Installing Next.js 14...",
+                'Installing Next.js 14...',
                 1000,
-                "Installing Tailwind CSS...",
+                'Installing Tailwind CSS...',
                 1000,
-                "Installing Three.js / R3F...",
+                'Installing Three.js / R3F...',
                 1000,
-                "Dependencies installed successfully! 🚀",
+                'Dependencies installed successfully! 🚀',
                 2000,
               ]}
               wrapper="span"
@@ -106,17 +107,17 @@ const HeroIT = () => {
 
           {/* Cursor Blinking */}
           <div className="mt-4 animate-pulse">
-            <span className="text-green-400">➜</span>{" "}
+            <span className="text-green-400">➜</span>{' '}
             <span className="inline-block w-2 h-4 bg-gray-500 align-middle ml-1" />
           </div>
 
           {/* Di dalam konten terminal */}
           <div className="mb-4">
-            <span className="text-green-400">➜</span>{" "}
+            <span className="text-green-400">➜</span>{' '}
             <span className="text-blue-400">~</span>
             <span className="text-purple-400"> wget</span>
             <a
-              href="/cv/cv-web.pdf"
+              href={cvLinks.web}
               download
               className="text-yellow-400 hover:underline ml-2"
             >

@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { cvLinks } from '../constants';
+
 
 const HeroDesign = () => {
   const containerRef = useRef(null);
@@ -89,7 +91,7 @@ const HeroDesign = () => {
 
       {/* Floating Badge */}
       <a
-        href="/cv/cv-design.pdf"
+        href={cvLinks.design}
         download
         className="absolute bottom-10 right-10 flex items-center gap-4 bg-black text-white px-6 py-3 rounded-full shadow-xl hover:scale-110 transition-transform cursor-pointer z-50 group"
       >

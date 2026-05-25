@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { styles } from "../styles";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { cvLinks } from '../constants';
+
 // Import gambar dokumentasi kamu disini
 // Sementara saya pakai placeholder dari assets yang ada
 // --- GANTI BAGIAN IMPORT GAMBAR DENGAN INI ---
@@ -111,7 +113,7 @@ const HeroGuru = () => {
 
               {/* 2. Tombol Download CV (Baru) */}
               <a
-                href="/cv/cv-guru.pdf" // Ganti sesuai lokasi file kamu
+                href={cvLinks.guru} // Ganti sesuai lokasi file kamu
                 download="CV_Nugraha_Guru_2026.pdf" // Nama file saat didownload user
                 className="group"
               >

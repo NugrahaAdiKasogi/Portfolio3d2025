@@ -99,11 +99,11 @@ export const servicesData = [
 ];
 
 export const cvLinks = {
-  default: '/CV.pdf', // CV Umum (yang sekarang ada)
+  default: '/cv/cv-general.pdf', // CV Umum (yang sekarang ada)
   guru: '/cv/cv-guru.pdf',
-  it: '/cv/cv-it.pdf',
+  web: '/cv/cv-web.pdf',
   design: '/cv/cv-design.pdf',
-  data: '/cv/cv-data.pdf', // <--- Tambahkan baris ini
+  data: '/cv/cv-data.pdf',
 };
 
 export const projects = [
@@ -458,7 +458,8 @@ export const projects = [
       mainButtonText: 'Live Dashboard',
       mainButtonLink: 'https://dashboard-ai-impact-to-student.vercel.app/',
       secondaryButtonText: 'GitHub Pipeline',
-      secondaryButtonLink: 'https://github.com/NugrahaAdiKasogi/AI_Student_Impact_DataPipeline.git', // Ganti link repo GitHub-mu
+      secondaryButtonLink:
+        'https://github.com/NugrahaAdiKasogi/AI_Student_Impact_DataPipeline.git', // Ganti link repo GitHub-mu
     },
   },
 
@@ -485,7 +486,8 @@ export const projects = [
       mainButtonLink:
         'https://datastudio.google.com/reporting/9b8135f6-5162-441e-85e5-156bc2fcb473',
       secondaryButtonText: 'GitHub Pipeline',
-      secondaryButtonLink: 'https://github.com/NugrahaAdiKasogi/Data_Global_Education_ETL.git', // Ganti link repo GitHub-mu
+      secondaryButtonLink:
+        'https://github.com/NugrahaAdiKasogi/Data_Global_Education_ETL.git', // Ganti link repo GitHub-mu
     },
   },
 ];
